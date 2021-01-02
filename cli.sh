@@ -2,7 +2,12 @@
 basedir=$(dirname $0)
 . ${basedir}/env.sh
 
-CLUSTER_ROOT=`readlink -f $basedir`
+OS=`uname`
+if [ "$OS" == "Linux" ];then
+  CLUSTER_ROOT=`readlink -f $basedir`
+else
+  CLUSTER_ROOT="."
+fi
 
 function usage() {
 cat << EOF
