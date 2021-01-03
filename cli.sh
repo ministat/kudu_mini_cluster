@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 basedir=$(dirname $0)
 . ${basedir}/env.sh
 
